@@ -1,0 +1,105 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.textarea{
+    display: block;
+    width: 80%;
+    height: 150px;
+    padding: 5px;
+    margin: 20px auto;
+    font-size: 20px;
+    overflow: auto;
+    outline: none;
+    box-shadow: none;
+    background-color: white;
+    color: #272727;
+    resize: none;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 20px;
+    color: #272727;
+}
+
+.about {
+    font-size: 15px;
+    text-align: center;
+    color: #272727;
+}
+
+.keyboard{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0;
+    background: #FEF5EB;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    transition: botton 0.4s;
+}
+
+.keyboard-hidden {
+    bottom: -100%;
+    transition: 0.5s;
+}
+
+.keyboard__keys {
+    text-align: center;
+}
+
+.keyboard__key {
+    height: 45px;
+    width: 6%;
+    max-width: 90px;
+    margin: 3px;
+    border-radius: 4px;
+    border: none;
+    background: rgba(181, 184, 177);
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    padding: 0;
+    position: relative;
+}
+
+.keyboard__key:active {
+    background: rgba(181, 184, 177, 0.7);
+}
+
+.keyboard__key-wide {
+    width: 12%;
+}
+
+.keyboard__key--extra-wide {
+    width: 36%;
+    max-width: 500px;
+}
+
+.keyboard__key-activatable::after {
+    content: '';
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+}
+
+.keyboard__key-active::after {
+    background: #D70913;
+}
+
+.keyboard__key-dark {
+    background: rgba(0, 0, 0, 0.5);
+}
